@@ -1,14 +1,14 @@
-word = 'aBba'
-
+word = 'abba'
 
 def palindrome_test(word):
     right = len(word) -1
     for left in range(len(word)-1):
         if word[left] != word[right]:
-            print "Word is not a palindrome"
-            return
+            return False
         right -= 1
-    print (word + " is indeed a palindrome")
+    return True
 
 
-palindrome_test(word.lower())
+result  = palindrome_test(word)
+
+print "palindrome? :" + str(result)
