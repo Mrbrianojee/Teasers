@@ -1,9 +1,9 @@
-mycode = 'print "hello bootcampers"'
-code = """
-def multiply(x,y):
-    return x*y
+some_code = 'print "hello bootcampers"'
+other_code = """
+def exp(x,y):
+    return x**y
 
-print 'The product of 2 and 3 is: ',multiply(2,3)
+print '2 to the power of 4 is: ',exp(2,4)
 """
-exec(mycode)
-exec(code)
+exec(some_code)
+exec(other_code)

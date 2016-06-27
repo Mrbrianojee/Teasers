@@ -1,23 +1,16 @@
 import re
-p = raw_input("Input your password")
-failed = True
-while failed:
-    if (len(p)<6 or len(p)>12):
-        break
-    elif not re.search("[a-z]",p):
-        break
-    elif not re.search("[0-9]",p):
-        break
-    elif not re.search("[A-Z]",p):
-        break
-    elif not re.search("[$#@]",p):
-        break
-    elif re.search("\s",p):
-        break
-    else:
-        print("Valid Password")
-        failed=False
-        break
+pwd = "Apple000006$" #raw_input("Enter a password")
 
-if failed:
-    print("Not a Valid Password")
+
+
+if ((len(pwd)<6 or len(pwd)>16)
+    or not re.search("[a-z]",pwd)
+    or not re.search("[0-9]",pwd)
+    or not re.search("[A-Z]",pwd)
+    or not re.search("[$#@]",pwd)
+    or re.search("\s",pwd)):
+
+    print "Invalid Password"
+else:
+    print "Valid Password"
+
